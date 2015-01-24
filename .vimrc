@@ -7,16 +7,18 @@ let maplocalleader="\\"
 " }}}
 
 " Status line --- {{{
-set statusline=%f		" file path
-set statusline+=\ 		" separator
-set statusline+=%y 		" filetype
-set statusline+=\ 		" separator
-set statusline+=%m		" modified
-set statusline+=%r		" readonly
-set statusline+=%=		" align right
-set statusline+=%l		" current line
-set statusline+=/		" separator
-set statusline+=%L		" total lines
+set statusline=%f	" file path
+set statusline+=\ 	" separator
+set statusline+=%y 	" filetype
+set statusline+=\ 	" separator
+set statusline+=%m	" modified
+set statusline+=%r	" readonly
+set statusline+=%=	" align right
+set statusline+=%l	" current line
+set statusline+=/	" separator
+set statusline+=%L	" total lines
+
+set laststatus=2	" always show status line on 2nd last line
 " }}}
 
 " Mappings --- {
