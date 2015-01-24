@@ -21,7 +21,7 @@ set statusline+=%L	" total lines
 set laststatus=2	" always show status line on 2nd last line
 " }}}
 
-" Mappings --- {
+" Mappings --- {{{
 " Edit and source .vimrc
 nnoremap <leader>ev :vsplit $MYVIMRC<cr>
 nnoremap <leader>sv :source $MYVIMRC<cr>
@@ -34,6 +34,12 @@ inoremap <c-w> <c-g>u<c-w>
 " Easier <esc>
 inoremap jk <esc>
 inoremap <esc> <nop>
+
+" Ignore arrow keys
+noremap <up> <nop>
+noremap <down> <nop>
+noremap <left> <nop>
+noremap <right> <nop>
 
 " Transpose lines
 noremap <leader>- dd p
