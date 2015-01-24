@@ -9,6 +9,8 @@ let maplocalleader="\\"
 " Status line --- {{{
 set statusline=%f		" file path
 set statusline+=\ 		" separator
+set statusline+=%y 		" filetype
+set statusline+=\ 		" separator
 set statusline+=%m		" modified
 set statusline+=%r		" readonly
 set statusline+=%=		" align right
