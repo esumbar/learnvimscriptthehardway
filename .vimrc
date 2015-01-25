@@ -14,6 +14,8 @@ set statusline+=\ 	" separator
 set statusline+=%m	" modified
 set statusline+=%r	" readonly
 set statusline+=%=	" align right
+set statusline+=%c	" current column
+set statusline+=/	" separator
 set statusline+=%l	" current line
 set statusline+=/	" separator
 set statusline+=%L	" total lines
