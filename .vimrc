@@ -72,6 +72,9 @@ nnoremap H ^
 " Move to the end of the current line
 nnoremap L $
 
+" Previous buffer below
+nnoremap <leader>pb :execute "rightbelow split" bufname("#")<cr>
+
 " Operate on next email
 onoremap in@ :execute "normal! /@\r:nohlsearch\rBvEbe"<cr>
 " }}}
