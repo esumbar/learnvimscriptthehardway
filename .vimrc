@@ -115,9 +115,11 @@ augroup filetype_markdown
 augroup END
 " }}}
 
+" Abbreviations --- {{{
 iabbrev adn  and
 iabbrev teh  the
 iabbrev waht what
 iabbrev tehn then
 iabbrev @@ esumbar@gmail.com
 iabbrev ssig -- <cr>Edmund Sumbar<cr>esumbar@gmail.com
+" }}}
