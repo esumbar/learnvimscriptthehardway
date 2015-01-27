@@ -75,6 +75,9 @@ nnoremap L $
 " Previous buffer below
 nnoremap <leader>pb :execute "rightbelow split" bufname("#")<cr>
 
+" Delete two lines, break undo sequence
+nnoremap <leader>d i<c-o>dd<c-g>u<c-o>dd<esc>
+
 " Operate on next email
 onoremap in@ :execute "normal! /@\r:nohlsearch\rBvEbe"<cr>
 " }}}
