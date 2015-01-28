@@ -87,6 +87,9 @@ nnoremap <leader>W :match none<cr>
 " Always do very magic search
 nnoremap / /\v
 
+" Unhighlight search results
+nnoremap <leader>h :nohlsearch<cr>
+
 " Operate on next email
 onoremap in@ :execute "normal! /@\r:nohlsearch\rBvEbe"<cr>
 " }}}
