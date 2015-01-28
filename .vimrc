@@ -2,7 +2,7 @@
 set number
 set numberwidth=4
 
-set hlsearch incsearch
+set hlsearch noincsearch
 
 let mapleader=","
 let maplocalleader="\\"
@@ -88,7 +88,7 @@ nnoremap <leader>W :match none<cr>
 nnoremap / /\v
 
 " Unhighlight search results
-nnoremap <leader>h :nohlsearch<cr>
+nnoremap <leader>H :nohlsearch<cr>
 
 " Operate on next email
 onoremap in@ :execute "normal! /@\r:nohlsearch\rBvEbe"<cr>
