@@ -2,6 +2,8 @@
 set number
 set numberwidth=4
 
+set hlsearch incsearch
+
 let mapleader=","
 let maplocalleader="\\"
 " }}}
