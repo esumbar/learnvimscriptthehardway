@@ -78,6 +78,10 @@ nnoremap <leader>pb :execute "rightbelow split" bufname("#")<cr>
 " Delete two lines, break undo sequence
 nnoremap <leader>d i<c-o>dd<c-g>u<c-o>dd<esc>
 
+" Highlight/unhighlight trailing whitespace
+nnoremap <leader>w :match Error /\v\s+$/<cr>
+nnoremap <leader>W :match none<cr>
+
 " Operate on next email
 onoremap in@ :execute "normal! /@\r:nohlsearch\rBvEbe"<cr>
 " }}}
