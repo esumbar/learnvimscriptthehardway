@@ -82,6 +82,9 @@ nnoremap <leader>d i<c-o>dd<c-g>u<c-o>dd<esc>
 nnoremap <leader>w :match Error /\v\s+$/<cr>
 nnoremap <leader>W :match none<cr>
 
+" Always do very magic search
+nnoremap / /\v
+
 " Operate on next email
 onoremap in@ :execute "normal! /@\r:nohlsearch\rBvEbe"<cr>
 " }}}
