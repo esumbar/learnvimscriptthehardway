@@ -92,6 +92,9 @@ nnoremap <leader>H :nohlsearch<cr>
 
 " Operate on next email
 onoremap in@ :execute "normal! /@\r:nohlsearch\rBvEbe"<cr>
+
+" Exercise: grep operator, part one
+nnoremap <leader>g :silent execute "grep! -R " . shellescape(expand("<cWORD>")) . " ."<cr>:copen<cr>
 " }}}
 
 " Python file settings --- {{{
