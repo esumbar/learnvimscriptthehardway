@@ -98,9 +98,10 @@ onoremap in@ :execute "normal! /@\r:nohlsearch\rBvEbe"<cr>
 " Commented out for grep operator, part two
 " nnoremap <leader>g :silent execute "grep! -R " . shellescape(expand("<cWORD>")) . " ."<cr>:copen 20<cr>
 
-" Move up/down through the Quickfix window
+" Move up/down or close the Quickfix window
 nnoremap <leader>gn :cnext<cr>
 nnoremap <leader>gp :cprevious<cr>
+nnoremap <leader>gc :cclose<cr>
 " }}}
 
 " Python file settings --- {{{
