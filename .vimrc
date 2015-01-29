@@ -1,6 +1,7 @@
 " Basic settings --- {{{
 set number
 set numberwidth=4
+set shiftwidth=4
 
 set hlsearch noincsearch
 
@@ -94,7 +95,8 @@ nnoremap <leader>H :nohlsearch<cr>
 onoremap in@ :execute "normal! /@\r:nohlsearch\rBvEbe"<cr>
 
 " Exercise: grep operator, part one
-nnoremap <leader>g :silent execute "grep! -R " . shellescape(expand("<cWORD>")) . " ."<cr>:copen 20<cr>
+" Commented out for grep operator, part two
+" nnoremap <leader>g :silent execute "grep! -R " . shellescape(expand("<cWORD>")) . " ."<cr>:copen 20<cr>
 
 " Move up/down through the Quickfix window
 nnoremap <leader>gn :cnext<cr>
