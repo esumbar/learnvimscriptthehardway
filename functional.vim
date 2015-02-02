@@ -37,35 +37,38 @@ function! Mapped(fn, l)
     return new_list
 endfunction
 
-" Convert functions to also support dictionaries
-" Finish implementing the Reduced function
-
 function! Filtered(fn, l)
     let new_list = deepcopy(a:l)
-    call filter(new_list, string(a:fn) . '(v:val)')
+    if type(a:l) == type([])
+	call filter(new_list, string(a:fn) . '(v:val)')
+    elseif type(a:l) == type({})
+	" filter dictionary based on keys
+	call filter(new_list, string(a:fn) . '(v:key)')
+    endif
     return new_list
 endfunction
 
 function! Removed(fn, l)
     let new_list = deepcopy(a:l)
-    call filter(new_list, '!' . string(a:fn) . '(v:val)')
+    if type(a:l) == type([])
+	call filter(new_list, '!' . string(a:fn) . '(v:val)')
+    elseif type(a:l) == type({})
+	" filter dictionary based on keys
+	call filter(new_list, '!' . string(a:fn) . '(v:key)')
+    endif
     return new_list
 endfunction
 
-function! Reduced(fn, l)
+function! Reduced(fn, l, memo)
+    let reduction = a:memo
     if type(a:l) == type([])
-	let new_list = deepcopy(a:l)
-	let reduction = remove(new_list, 0)
-	for item in new_list
+	for item in a:l
 	    let reduction = a:fn(reduction, item)
 	endfor
     elseif type(a:l) == type({})
-	let new_dict = deepcopy(a:l)
-	let first_key = keys(a:l)[0]
-	let reduction = remove(new_dict, first_key)
-    else
-	echom "Not a List or Dict"
-	let reduction = 0
+	for [key, value] in items(a:l)
+	    let reduction = a:fn(reduction, key, value)
+	endfor
     endif
     return reduction
 endfunction
